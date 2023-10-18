@@ -7,10 +7,12 @@ h1 {
   color: #2d767f;
   font-size: 57px;
 }
-.weatherContainer {
-  color: #33373a;
+.weatherWrapper {
   max-width: 750px;
   margin: 0 auto;
+}
+.weatherContainer {
+  color: #33373a;
   padding: 30px;
   border: 10px double #414a50;
   border-radius: 7px;
@@ -73,9 +75,6 @@ h3 {
   line-height: 30px;
   text-align: left;
 }
-.openSourced {
-  position: relative;
-  margin-top: 10px;
-  width: 700px;
-  left: 315px;
+#openSourced {
+  padding: 5px 0px;
 }
