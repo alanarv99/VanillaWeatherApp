@@ -1,0 +1,81 @@
+body {
+  background: #f0ece2;
+  font-family: Georgia, serif;
+}
+h1 {
+  text-align: center;
+  color: #2d767f;
+  font-size: 57px;
+}
+.weatherContainer {
+  color: #33373a;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 30px;
+  border: 10px double #414a50;
+  border-radius: 7px;
+}
+#currentLocation {
+  width: 50px;
+  font-size: large;
+}
+#searchBar {
+  width: 400px;
+  background: #ededee;
+  font-size: large;
+  border-radius: 2px;
+}
+#searchButton {
+  width: 50px;
+  font-size: large;
+}
+.horizontalLine {
+  margin: 20px 2px 10px 2px;
+}
+h3 {
+  font-size: 40px;
+  color: #80a3a2;
+  padding: 0px 10px;
+}
+.dateTimeWeather {
+  list-style-type: none;
+  font-size: 25px;
+}
+.emoji {
+  text-align: center;
+  font-size: 140px;
+  position: static;
+  line-height: 100px;
+}
+#temperature {
+  font-size: 75px;
+  padding: 5px;
+  margin: 0px;
+  position: relative;
+  top: -13px;
+  left: -47px;
+}
+.degreeSymbol {
+  font-size: 30px;
+  position: relative;
+  top: -30px;
+  left: -50px;
+}
+.cAndF {
+  font-size: 23px;
+  position: relative;
+  top: -24px;
+  left: -44px;
+}
+.pHW {
+  list-style-type: none;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: left;
+}
+.openSourced {
+  position: relative;
+  margin-top: 10px;
+  width: 700px;
+  left: 315px;
+}
