@@ -17,18 +17,13 @@ h1 {
   border: 10px double #414a50;
   border-radius: 7px;
 }
-
 #currentLocation {
   width: 50px;
   font-size: large;
-  display: inline-block;
   margin: 0;
 }
-#searchCityForm {
-  display: inline-block;
-}
 #searchBar {
-  width: 400px;
+  width: 450px;
   background: #ededee;
   font-size: large;
   border-radius: 4px;

@@ -16,38 +16,36 @@
     <h1>"Weather" it's Rain or Shine</h1>
     <div class="weatherWrapper">
       <div class="weatherContainer container">
-        <div class="rowOne row g-3">
-          <form id="yourSpot">
-            <div class="col-sm-2">
-              <input
-                title="Current Location"
-                type="submit"
-                value="📍"
-                id="currentLocation"
-                class="form-control"
-              />
-            </div>
+        <form class="row rowOne" id="searchCityForm">
+          <div class="col-8">
+            <input
+              type="text"
+              placeholder="Search for Weather in..."
+              autofocus="on"
+              id="searchBar"
+              class="form-control"
+            />
+          </div>
+          <div class="col-2">
+            <input
+              type="submit"
+              title="Search"
+              value="🔎"
+              id="searchButton"
+              class="form-control"
+            />
+          </div>
+          <form class="col-1" id="yourSpot">
+            <input
+              title="Current Location"
+              type="submit"
+              value="📍"
+              id="currentLocation"
+              class="form-control"
+            />
           </form>
-          <form id="searchCityForm">
-            <div class="col-md-6">
-              <input
-                type="text"
-                placeholder="Search for Weather in..."
-                autofocus="on"
-                id="searchBar"
-                class="form-control"
-              />
-            </div>
-            <div class="col-sm-2">
-              <input
-                type="submit"
-                title="Search"
-                value="🔎"
-                id="searchButton"
-                class="form-control"
-              />
-            </div>
-          </form>
+        </form>
+        <div>
           <hr class="horizontalLine" />
         </div>
         <div class="rowTwo row">
@@ -69,9 +67,9 @@
               </div>
               <div class="col-6">
                 <ul class="cHW">
-                  <li>Cloudiness:<span id="cloudiness">2%</span></li>
-                  <li>Humidity:<span id="humidity">0%</span></li>
-                  <li>Wind:<span id="wind">2mph</span></li>
+                  <li>Cloudiness:<span id="cloudiness"> 2%</span></li>
+                  <li>Humidity:<span id="humidity"> 0%</span></li>
+                  <li>Wind:<span id="wind"> 2mph</span></li>
                 </ul>
               </div>
             </div>
