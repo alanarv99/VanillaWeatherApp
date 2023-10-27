@@ -23,7 +23,7 @@ h1 {
   margin: 0;
 }
 #searchBar {
-  width: 450px;
+  width: 568px;
   background: #ededee;
   font-size: large;
   border-radius: 4px;
@@ -33,6 +33,8 @@ h1 {
   width: 50px;
   font-size: large;
   margin: 0;
+  position: relative;
+  left: 40px;
 }
 
 .horizontalLine {
