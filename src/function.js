@@ -22,6 +22,17 @@ function currentLocationWeather(event) {
 
     let weatherDescriptor = document.querySelector("#description");
     weatherDescriptor.innerHTML = response.data.weather[0].main;
+
+    let weatherIcon = document.querySelector("#icon");
+    weatherIcon.setAttribute(
+      "src",
+      `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+    let iconAltText = document.querySelector("#icon");
+    iconAltText.setAttribute(
+      "alt",
+      `https://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`
+    );
   }
   function pinLocation(position) {
     let latitude = position.coords.latitude;
@@ -60,6 +71,18 @@ function searchCity(event) {
 
     let weatherDescriptor = document.querySelector("#description");
     weatherDescriptor.innerHTML = response.data.weather[0].main;
+
+    let weatherIcon = document.querySelector("#icon");
+    weatherIcon.setAttribute(
+      "src",
+      `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+
+    let iconAltText = document.querySelector("#icon");
+    iconAltText.setAttribute(
+      "alt",
+      `https://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`
+    );
   }
   let apiKey = "cd173a006b0e51dac58c6d8064c94178";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
