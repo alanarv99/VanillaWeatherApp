@@ -6,7 +6,7 @@ function currentLocationWeather(event) {
 
     let temp = document.querySelector("#temperature");
     let tempRounded = Math.round(response.data.main.temp);
-    temp.innerHTML = `${tempRounded}°C`;
+    temp.innerHTML = `${tempRounded}`;
 
     let weatherCloud = document.querySelector("#cloudiness");
     let cloudRounded = Math.round(response.data.clouds.all);
@@ -33,6 +33,8 @@ function currentLocationWeather(event) {
       "alt",
       `https://openweathermap.org/img/wn/${response.data.weather[0].description}@2x.png`
     );
+
+    celciusTemperature = response.data.main.temp;
   }
   function pinLocation(position) {
     let latitude = position.coords.latitude;
@@ -55,7 +57,7 @@ function searchCity(event) {
   function displayWeather(response) {
     let temp = document.querySelector("#temperature");
     let tempRounded = Math.round(response.data.main.temp);
-    temp.innerHTML = ` ${tempRounded}°C`;
+    temp.innerHTML = ` ${tempRounded}`;
 
     let weatherCloud = document.querySelector("#cloudiness");
     let cloudRounded = Math.round(response.data.clouds.all);
@@ -91,3 +93,24 @@ function searchCity(event) {
 
 let search = document.querySelector("#searchCityForm");
 search.addEventListener("submit", searchCity);
+
+function displayTemperatureInFarenheight(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  let farenheightTemp = (celciusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(farenheightTemp);
+}
+
+function displayTemperatureInCelcius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
+}
+
+let celciusTemperature = null;
+
+let celcius = document.querySelector("#celciusButton");
+celcius.addEventListener("click", displayTemperatureInCelcius);
+
+let farenheight = document.querySelector("#farenheightButton");
+farenheight.addEventListener("click", displayTemperatureInFarenheight);
