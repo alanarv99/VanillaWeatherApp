@@ -61,6 +61,11 @@ h3 {
   top: -50px;
   left: -44px;
 }
+#celciusButton:active {
+  background-color: #2d767f;
+  transition: all 300ms ease;
+}
+
 .cHW {
   list-style-type: none;
   font-size: 20px;
