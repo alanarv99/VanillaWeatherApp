@@ -43,7 +43,7 @@ h3 {
   color: #80a3a2;
   padding: 0px 10px;
 }
-.dateTimeWeather {
+#dateDescription {
   list-style-type: none;
   font-size: 25px;
 }
