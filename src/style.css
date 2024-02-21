@@ -75,3 +75,24 @@ h3 {
 #openSourced {
   padding: 5px 0px;
 }
+.dayZ {
+  text-align: center;
+}
+.weatherForecast {
+  display: flex justify;
+  justify-content: space-around;
+
+  text-align: center;
+}
+.weatherForecastDate {
+  text-align: center;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.forecastTemperatures {
+  text-align: center;
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+}
