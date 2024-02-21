@@ -17,11 +17,9 @@ function displayWeather(response) {
   weatherHumidity.innerHTML = ` ${Math.round(response.data.main.humidity)}%`;
   weatherWind.innerHTML = ` ${Math.round(response.data.wind.speed)}mps`;
   weatherDescriptor.innerHTML = response.data.weather[0].main;
-  weatherIcon.setAttribute(
-    "src",
-    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
-  weatherIcon.setAttribute("alt", response.data.weather[0].main);
+  weatherIcon.innerHTML = `<img src="${response.data.condition.icon_url}"/>`;
+
+  getForecast(response.data.city);
 }
 function latLonLocation(event) {
   event.preventDefault();
@@ -86,7 +84,31 @@ function searchedCity(event) {
 let pin = document.querySelector("#currentLocation");
 pin.addEventListener("click", latLonLocation);
 
+function displayForecast() {
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+      <div class="forecastDay">
+        <div class="forecastDate">${day}</div>
+        <div class="forecastIcon">👍</div>
+        <div class="forecastTemperatures">
+          <div class=:forecastTemp"> 
+            <strong>21°F | </strong>
+            </div>
+      <div class = "forecastTemp"> 10°C</div>
+      </div>
+`;
+  });
+  let forecast = document.querySelector("#forecast");
+  forecast.innerHTML = forecastHtml;
+}
+
 let searcher = document.querySelector("#searchCityForm");
 searcher.addEventListener("submit", searchedCity);
 
 search("New York");
+displayForecast();
