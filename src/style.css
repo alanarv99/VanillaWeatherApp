@@ -66,12 +66,20 @@ h3 {
   transition: all 300ms ease;
 }
 
-.cHW {
+#time {
+  list-style-type: none;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: left;
+}
+#description {
   list-style-type: none;
   font-size: 20px;
   line-height: 30px;
   text-align: left;
+  text-transform: capitalize;
 }
+
 #openSourced {
   padding: 5px 0px;
 }
@@ -79,10 +87,10 @@ h3 {
   text-align: center;
 }
 .weatherForecast {
-  display: flex justify;
+  display: flex block;
   justify-content: space-around;
-
   text-align: center;
+  width: 100%;
 }
 .weatherForecastDate {
   text-align: center;
@@ -95,4 +103,9 @@ h3 {
   display: flex;
   margin-top: 10px;
   justify-content: center;
+}
+.forecastIcon {
+  width: 71px;
+  height: 71px;
+  text-align: center;
 }
